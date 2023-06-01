@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Added flex to main section to position content */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 75vh;
+    text-align: center;
+}
+/* Added flex to language divs to position content  */
+.languages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 580px;
+}
+/* Modify central title to match font size and style of the page. Actual page uses an image for the main title. */
+.title h2 {
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.title p {
+    font-size: 15px;
+}
+/* Increase the size of the first and last letter of the title to match WikipediA theme */
+.title h2::first-letter {
+    font-size: 2.3rem;
+}
+.title h2::after {
+    content: "a";
+    font-size: 2.3rem;
+}
+/* Modify language option links to change cursor, background, and underline on hover */
+.single {
+    margin: 1.3rem 0;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+}
+.single:hover {
+    background-color: #eaecf0;
+}
+.single h4 {
+    color: #3366CC;
+    font-size: 16px;
+}
+.single:hover h4 {
+    text-decoration: underline;
+}
+.single p {
+    font-size: 13px;
+    color: #54595D;
+}
+/* Added section to modify elements along the X and Y axis to mimic the curve layout of the page */
+.left,
+.right {
+    transform: translateY(-3%);
+}
+.portuguese,
+.english {
+    transform: translateX(70%);
+}
+.chinese,
+.japanese {
+    transform: translateX(20%);
+}
+.german {
+    transform: translateX(10%);
+}
+.russian,
+.polish {
+    transform: translateX(-70%);
+}
+.spanish,
+.italian {
+    transform: translateX(-20%);
+}
+.french {
+    transform: translateX(-10%);
+}
+.search {
+    display: flex;
+    transform: translateY(-50%);
+}
+/* Change the search box dimensions and text input size */
+.search input {
+    width: 395px;
+    height: 45px;
+    font-size: 20px;
+    padding: 8px 64px 8px 12px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    /* Change curve on border corners */
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+/* Add border colour to search box when selected */
+.search input:focus {
+    border-color: #3366CC;
+    border-width: 3px;
+}
+/* Add magnifying glass icon to a container with flex to match the position and colouring of the page */
+.search span {
+    display: inline-block;
+    width: 55px;
+    height: 45px;
+    background-color: #3366CC;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+}
+/* Add flex to LanguageWikiContainer to center content. Transform position to raise it slightly on the page */
+.yourLanguageWikiContainer {
+    width: 460px;
+    display: flex;
+    align-items: center;
+    transform: translateY(-20%);
+}
+/* Add flex to the LanguageWiki button to center text and icons. Change colour to match page theme */
+.yourLanguageWiki {
+    color: #3366CC;
+    border: 1px solid #3366CC;
+    background-color: #f8f9fa;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    /* Add marging to button box to match gap between line and button on page */
+    margin: 0 1rem;
+}
+/* Add faint line cosmetic feature */
+.line {
+    height: 1px;
+    background-color: #c5c5c5;
+    flex: 1;
+}
+/* Add margin to central element in button to space content */
+.yourLanguageWiki span:nth-child(2) {
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+/* Change background colour of button on hover */
+.yourLanguageWiki:hover {
+    background-color: transparent;
+}
+/* Add flex to column section to space content */
+section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+/* Add extra width and margin to first column elements */
+.column:first-child {
+    width: 385px;
+    margin-right: 2rem;
+}
+/* Add background to last element of first column */
+.column:first-child .single-2:last-child {
+    background-color: rgb(51, 102, 204, 0.05);
+}
+/* Add weight to title of last element of first column to mimic link text */
+.column:first-child .single-2:last-child h4 {
+    font-weight: 600;
+}
+/* Add margin between text and images contained in the last element of first column to provide space */
+.column:first-child .single-2:last-child p {
+    margin: 0.5rem 0;
+}
+/* Add flex to all column elements to position content. Add cursor change to the elements as they are links.  */
+.single-2 {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+/* Add background change on hover to all column elements EXCEPT the first column to follow real page behaviour */
+.single-2:not(.column:first-child .single-2):hover {
+    background-color: rgba(51, 102, 204, 0.2);
+}
+/* Add blue outline when clicked to all column elements EXCEPT the first column */
+.single-2:not(.column:first-child .single-2):active {
+    outline: 1px solid #3366CC;
+}
+.single-2 h4 {
+    color: #3366CC;
+    font-weight: 400;
+}
+.single-2 p {
+    color: rgba(0, 0, 0, 0.8)
+}
+/* Use flex to allocate page space to columns */
+.column {
+    flex: 1;
+}
+/* Modify image size for clarity and uniformity */
+.column img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+}
+/* Modify images internal to last element of first column for clarity */
+.images img {
+    width: 125px;
+    height: 40px;
+}
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 1rem 0;
+}
+footer p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+/* Modify text colour of links in footer to match page */
+a {
+    text-decoration: none;
+    color: #3366CC;
+}
+/* Add underline on hover to above links */
+a:hover {
+    text-decoration: underline;
+}
+
+
